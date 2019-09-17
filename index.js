@@ -43,9 +43,11 @@ bot.on('message', message=>{
             .setThumbnail(message.author.avatarURL)
             .setFooter('smirk')
             message.channel.sendEmbed(embed);
-        break;
-        
-
+            break;
+        case 'ban':
+            guild.ban(user, { days: 7, reason: 'He needed to go' })
+            .then(console.log)
+            .catch(console.error); 
     }
 })
 
