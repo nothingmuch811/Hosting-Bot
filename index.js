@@ -45,9 +45,9 @@ bot.on('message', message=>{
             message.channel.sendEmbed(embed);
             break;
         case 'ban':
-            guild.ban(user, { days: 7, reason: 'He needed to go' })
-            .then(console.log)
-            .catch(console.error); 
+            guild.ban('some user ID')
+              .then(user => console.log(`Banned ${user.username || user.id || user} from ${guild}`))
+              .catch(console.error);
     }
 })
 
