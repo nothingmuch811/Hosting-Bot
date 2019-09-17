@@ -45,11 +45,13 @@ bot.on('message', message=>{
             message.channel.sendEmbed(embed);
             break;
         case 'kick':
-           
             
             const user = message.mentions.users.first();
             
-            if(user){
+            if(user) {
+                const member = message.guild.member(user);
+            
+            if(member){
                 member.kick('You were kicked for trolling!').then(() =>{
                     message.reply(`Sucessfully kicked ${user.tag}`);
                 }).catch(err => {
