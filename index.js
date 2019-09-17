@@ -57,7 +57,7 @@ bot.on('message', message=>{
                     console.log(err);
                 });
             } else {
-                message.reply("That user isn\'t in the guild")
+                message.reply("You need to specify a person!")
             }
                           
         break;
