@@ -44,11 +44,29 @@ bot.on('message', message=>{
             .setFooter('smirk')
             message.channel.sendEmbed(embed);
             break;
-        case 'ban':
-            hamburger express.ban('some user ID')
-              .then(user => console.log(`Banned ${user.username || user.id || user} from ${guild}`))
-              .catch(console.error);
+        case 'kick':
+            if(!args[1]) messsage.channel.send('You need to specify a person!')
+            
+            const user = message.mentions.users.first();
+            
+            if(user){
+                member.kick('You were kicked for trolling!').then(() =>{
+                    message.reply(`Sucessfully kicked ${user.tag}`);
+                }).catch(err =>{
+                    message.reply('I was unable to kick that member');
+                    console.log(err);
+                });
+            } else{
+                message.reply("That user isn\'t in this server!")
+            }
+        } else {
+            message.reply('that user isn\'t in this server!")
+        }
+                          
+   break;
     }
+                          
+                          
 })
 
 
