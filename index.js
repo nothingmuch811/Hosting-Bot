@@ -24,7 +24,7 @@ bot.on('message', message=>{
         case 'info':
             if(args[1] === 'owner'){
                 message.channel.sendMessage('nAthan is the current owner of this server!');
-            }else{
+            } else {
                 message.channel.sendMessage('Invalid Args')
             }               
             break;
@@ -56,10 +56,10 @@ bot.on('message', message=>{
                     message.reply('I was unable to kick that member');
                     console.log(err);
                 });
-            } else{
+            } else {
                 message.reply("That user isn\'t in the guild")
             }
-        } else{
+        } else {
             message.reply('that user isn\'t in the guild')
         }
                           
