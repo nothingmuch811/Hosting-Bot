@@ -56,7 +56,7 @@ bot.on('message', message=>{
                     message.reply('I was unable to kick that member');
                     console.log(err);
                 });
-            } else{
+            } else {
                 message.reply("That user isn\'t in this server!")
             }
         } else {
