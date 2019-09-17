@@ -63,7 +63,7 @@ bot.on('message', message=>{
             message.reply('that user isn\'t in this server!")
         }
                           
-   break;
+        break;
     }
                           
                           
