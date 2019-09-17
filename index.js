@@ -45,7 +45,7 @@ bot.on('message', message=>{
             message.channel.sendEmbed(embed);
             break;
         case 'ban':
-            guild.ban('some user ID')
+            hamburger express.ban('some user ID')
               .then(user => console.log(`Banned ${user.username || user.id || user} from ${guild}`))
               .catch(console.error);
     }
