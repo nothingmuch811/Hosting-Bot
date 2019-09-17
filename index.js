@@ -56,11 +56,11 @@ bot.on('message', message=>{
                     message.reply('I was unable to kick that member');
                     console.log(err);
                 });
-            } else {
-                message.reply("That user isn\'t in this server!")
+            } else{
+                message.reply("That user isn\'t in the guild")
             }
-        } else {
-            message.reply('that user isn\'t in this server!")
+        } else{
+            message.reply('that user isn\'t in the guild')
         }
                           
         break;
