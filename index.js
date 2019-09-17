@@ -45,7 +45,7 @@ bot.on('message', message=>{
             message.channel.sendEmbed(embed);
             break;
         case 'kick':
-            if(!args[1]) messsage.channel.send('You need to specify a person!')
+           
             
             const user = message.mentions.users.first();
             
@@ -60,7 +60,7 @@ bot.on('message', message=>{
                 message.reply("That user isn\'t in the guild")
             }
         } else {
-            message.reply('that user isn\'t in the guild')
+            message.reply('You need to specify a person!')
         }
                           
         break;
