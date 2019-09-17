@@ -52,16 +52,13 @@ bot.on('message', message=>{
             if(user){
                 member.kick('You were kicked for trolling!').then(() =>{
                     message.reply(`Sucessfully kicked ${user.tag}`);
-                }).catch(err =>{
+                }).catch(err => {
                     message.reply('I was unable to kick that member');
                     console.log(err);
                 });
             } else {
                 message.reply("That user isn\'t in the guild")
             }
-        } else {
-            message.reply('You need to specify a person!')
-        }
                           
         break;
     }
