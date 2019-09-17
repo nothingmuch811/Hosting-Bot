@@ -51,7 +51,7 @@ bot.on('message', message=>{
             if(user) {
                 const member = message.guild.member(user);
             
-            if(member){
+            if (member) {
                 member.kick('You were kicked for trolling!').then(() =>{
                     message.reply(`Sucessfully kicked ${user.tag}`);
                 }).catch(err => {
